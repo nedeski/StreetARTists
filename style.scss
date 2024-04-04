@@ -1,0 +1,1003 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:wght@100;300;400;700&display=swap");
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --background-normal: #edd5bb;
+  --background-light: #fcebd5;
+  --background-dark: #e09686;
+  --primary-default: #a26a5e;
+}
+img {
+  max-width: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-light);
+}
+
+section {
+  display: none;
+}
+header {
+  position: relative;
+  display: block;
+  z-index: 100 !important;
+
+  padding: 5px 15px;
+  box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+  .nav-icon-container {
+    color: var(--primary-default);
+    display: flex;
+    .menu-btn {
+      cursor: pointer;
+    }
+  }
+  .navigation {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: -500%;
+    width: 100%;
+    background-color: var(--primary-default);
+    padding: 0;
+    margin: 0;
+    box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.48);
+    transition: all 0.3s ease;
+    li {
+      list-style: none;
+      text-align: center;
+
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #8a5a4f;
+      }
+      a {
+        padding: 20px 0 20px;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        color: var(--background-light);
+      }
+    }
+  }
+}
+.logo {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.5em;
+  color: var(--primary-default);
+  text-align: center;
+  h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .logo-img {
+    width: 70px;
+  }
+}
+.landing-page {
+  .logo-container {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .button-container {
+    width: 260px;
+    height: 400px;
+    margin: 0 AUTO;
+    position: relative;
+    .wrap1 {
+      position: relative;
+      z-index: 88;
+      &:hover {
+        filter: drop-shadow(-1px 6px 2px rgba(0, 0, 0, 0.3));
+      }
+    }
+    .wrap2 {
+      position: absolute;
+      top: 110px;
+      width: 100%;
+
+      &:hover {
+        filter: drop-shadow(-1px 6px 2px rgba(0, 0, 0, 0.3));
+      }
+    }
+    .up {
+      position: absolute;
+      top: 0;
+      padding: 20px;
+      width: 100%;
+      max-height: 276px;
+      background-color: var(--background-normal);
+      height: 290px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+      transition: all 0.3s ease;
+      box-shadow: 15px 19px 27px -5px rgba(0, 0, 0, 0.75);
+      z-index: 99;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 15px 19px 27px -5px rgba(0, 0, 0, 0.75);
+      }
+      p {
+        text-align: center;
+        font-family: "Reenie Beanie", cursive;
+        font-size: 45px;
+        color: var(--primary-default);
+        margin-bottom: 0;
+      }
+      .artist-list {
+        text-align: right;
+        select {
+          padding: 6px 15px;
+          background-color: transparent;
+          color: var(--primary-default);
+          border-color: var(--primary-default);
+        }
+      }
+    }
+    .down {
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      width: 100%;
+      height: 276px;
+      position: absolute;
+
+      clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+      background-color: var(--primary-default);
+      transition: all 0.3s ease;
+      box-shadow: 15px 19px 27px -5px rgba(0, 0, 0, 0.75);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.03);
+      }
+      p {
+        text-align: center;
+        color: var(--background-light);
+        font-family: "Reenie Beanie", cursive;
+        font-size: 45px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.artist-home-page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  .sales-info {
+    background-color: var(--background-normal);
+    padding: 15px;
+    .row {
+      display: flex;
+      .col {
+        color: var(--background-light);
+        padding: 10px;
+        width: 50%;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: var(--primary-default);
+        .income-amount,
+        .item-qty {
+          font-size: 2rem;
+          margin-bottom: 0;
+          font-weight: 500;
+        }
+      }
+      .total-items-sold {
+        margin-right: 10px;
+      }
+    }
+    .col {
+      color: var(--background-light);
+      padding: 10px;
+
+      text-align: center;
+      background-color: #d44c2e;
+      .auction-amount {
+        font-size: 2rem;
+        margin-bottom: 0;
+        font-weight: 500;
+      }
+    }
+    .live-auctioning {
+      display: none;
+      text-decoration: none;
+    }
+  }
+  .chart-container {
+    margin-top: 20px;
+    padding: 15px;
+    #myChart {
+      margin-top: 35px;
+    }
+
+    .button-container {
+      h2 {
+        color: var(--primary-default);
+        font-weight: 300;
+      }
+      button {
+        border: none;
+        padding: 7px 12px;
+        background-color: var(--primary-default);
+        color: var(--background-light);
+        border-radius: 2px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+      }
+      button.active {
+        background-color: #d44c2e;
+      }
+    }
+  }
+}
+.artist-items {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-normal);
+  padding: 20px 0;
+  position: relative;
+  .add-item-btn-container {
+    box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+    background-color: var(--background-light);
+    padding: 20px;
+    #openModalBtn {
+      font-family: "Roboto", sans-serif;
+      color: var(--primary-default);
+      font-weight: 100;
+      font-size: 1.5rem;
+      padding: 40px 0;
+      text-align: center;
+      display: block;
+      width: 100%;
+      border: 2px dashed var(--primary-default);
+      background-color: var(--background-light);
+      cursor: pointer;
+    }
+  }
+  .add-new-item-modal.d-none {
+    display: none;
+  }
+  .add-new-item-modal {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-default);
+    color: var(--background-light);
+    padding: 20px;
+    font-weight: 100;
+    h2 {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    .form-control-inline {
+      display: inline-block;
+    }
+    .flex-form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px 10px;
+        border: none;
+        border-radius: 4px;
+      }
+      #addNewItemBtn {
+        margin-right: 10px;
+        color: var(--background-light);
+        background-color: #d44c2e;
+      }
+      #cancelBtn {
+        margin-left: 10px;
+        color: var(--primary-default);
+        background-color: var(--background-light);
+      }
+    }
+    .form-control {
+      label {
+        display: block;
+      }
+      input,
+      textarea,
+      select {
+        color: var(--background-light);
+        font-weight: 100;
+        padding: 4px 4px;
+        width: 100%;
+        display: block;
+        border: 1px solid var(--background-light);
+        background-color: transparent;
+      }
+
+      margin-bottom: 10px;
+    }
+    .snapshot {
+      border: 2px dashed var(--background-light);
+
+      text-align: center;
+      .takesnapshot.d-none {
+        display: none;
+      }
+      .takesnapshot {
+        padding: 100px;
+      }
+    }
+  }
+  #captureImagePage.d-none {
+    display: none;
+  }
+  #captureImagePage {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-default);
+    padding: 20px;
+    canvas {
+      display: none;
+    }
+    video {
+      padding: 10px 0;
+      display: block;
+      width: 100%;
+      height: 70vh;
+    }
+    .wrap {
+      width: 100%;
+      text-align: center;
+    }
+    #screenShot {
+      text-align: center;
+      border: none;
+      background-color: transparent;
+      color: var(--background-light);
+    }
+  }
+  .card-container.d-none {
+    display: none;
+  }
+  .card-container {
+    padding: 20px 0;
+    .card {
+      border-radius: 5px;
+      background-color: var(--background-light);
+      margin-bottom: 20px;
+      box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+    }
+    .card-img {
+      height: 160px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .card-header {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        font-weight: 400;
+        color: var(--primary-default);
+        margin-bottom: 0px;
+      }
+      .date {
+        font-size: 12px;
+        color: var(--background-dark);
+      }
+      .price {
+        font-size: 14px;
+        background-color: var(--primary-default);
+        padding: 3px 7px;
+        color: var(--background-light);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+        border-radius: 2px;
+      }
+    }
+    .card-body {
+      padding: 10px;
+      p {
+        font-size: 14px;
+        color: var(--primary-default);
+      }
+    }
+    .card-footer {
+      background-color: var(--primary-default);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      button {
+        font-size: 12px;
+        border: none;
+        padding: 8px 10px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.5;
+      }
+      .sendToAuctionBtn {
+        color: white;
+        background-color: #1b59ac;
+      }
+      .publishBtn {
+        color: white;
+        background-color: #1bac6f;
+      }
+      .removeBtn {
+        color: white;
+        background-color: #d44c2e;
+      }
+      .editBtn {
+        color: var(--primary-default);
+        background-color: var(--background-light);
+      }
+    }
+  }
+}
+.visiotor-home-page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: var(--primary-default);
+  .hero {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    background: url(./images/Bricks.png) no-repeat;
+    background-size: cover;
+    h1 {
+      width: 60%;
+
+      margin-bottom: 0;
+    }
+    .cta {
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 400;
+      color: var(--background-light);
+      background-color: var(--primary-default);
+      padding: 5px 8px;
+      border-radius: 3px;
+    }
+  }
+  .images-animation {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+    background-color: var(--background-normal);
+
+    .top {
+      position: relative;
+      transform: translateX(-850px);
+      display: flex;
+      animation: animationtoleft 45s linear infinite;
+    }
+    .bottom {
+      position: relative;
+
+      display: flex;
+      animation: animationtoright 45s linear infinite;
+    }
+    .img-wrapper {
+      box-shadow: 6px 5px 6px -1px rgba(0, 0, 0, 0.58);
+      min-width: 150px;
+      height: 100px;
+      margin: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .carousel {
+    font-size: 9px;
+    position: relative;
+    padding-top: 30px;
+    button {
+      font-size: 20px;
+      font-weight: 300;
+      border: none;
+      color: var(--primary-default);
+      background-color: transparent;
+    }
+    .prev {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      z-index: 100;
+    }
+    .next {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      z-index: 100;
+    }
+    .carousel-container {
+      position: relative;
+      width: 250px;
+      margin: 0 auto;
+      padding: 30px 0;
+
+      overflow-x: hidden;
+      .wrapper {
+        position: relative;
+        display: flex;
+        left: 0;
+
+        transition: transform 0.3s ease;
+      }
+
+      .carousel-item {
+        min-width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .left {
+          flex-basis: 50%;
+          padding: 10px;
+          border-right: 1px solid var(--primary-default);
+          .card {
+            text-align: center;
+            position: relative;
+
+            .image {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              overflow: hidden;
+              position: absolute;
+              top: -30px;
+              left: 50%;
+              transform: translateX(-50%);
+              img {
+                min-height: 100%;
+                width: 100%;
+              }
+            }
+            .text {
+              background-color: var(--background-dark);
+              color: var(--background-light);
+              padding: 50px 10px 10px;
+            }
+          }
+        }
+        .right {
+          text-align: center;
+          flex-basis: 50%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+.visiotor-listing-page {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-normal);
+  padding: 20px 0;
+  position: relative;
+  .card-container.d-none {
+    display: none;
+  }
+  .card-container {
+    padding: 20px 0;
+    .card {
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+    }
+    .card.light {
+      background-color: var(--background-light);
+    }
+    .card.dark {
+      background-color: var(--primary-default);
+      .artist-name,
+      p {
+        color: var(--background-light);
+      }
+      .price {
+        background-color: var(--background-light);
+        color: var(--primary-default);
+      }
+    }
+    .card-img {
+      height: 160px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .card-header {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .artist-name {
+        font-family: "Reenie Beanie", cursive;
+        font-weight: 100;
+        font-size: 2rem;
+        color: var(--primary-default);
+        margin-bottom: 0px;
+      }
+
+      .date {
+        font-size: 12px;
+        color: var(--background-dark);
+      }
+      .price {
+        font-size: 14px;
+        background-color: var(--primary-default);
+        padding: 3px 7px;
+        color: var(--background-light);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+        border-radius: 2px;
+      }
+    }
+    .card-body {
+      padding: 5px 10px;
+      p {
+        font-size: 11px;
+        color: var(--primary-default);
+      }
+    }
+  }
+  .filterBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+  }
+  .filterBtn.d-none {
+    display: none;
+  }
+  .filterPage.d-none {
+    display: none;
+  }
+  .filterPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--background-light);
+    background-color: var(--primary-default);
+    padding: 20px 10px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+    .closeBtn,
+    .applyBtn {
+      background-color: transparent;
+      border: none;
+    }
+    .applyBtn {
+      display: inline-block;
+      margin-left: auto;
+    }
+    .form-control {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--background-light);
+      font-weight: 100;
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input,
+      select {
+        background-color: transparent;
+        border: 1px solid var(--background-light);
+        padding: 3px;
+        color: var(--background-light);
+        font-weight: 100;
+      }
+      .flex {
+        display: flex;
+        .minprice,
+        .maxprice {
+          margin: 5px;
+        }
+        label {
+          display: inline;
+        }
+        input {
+          width: 50%;
+        }
+      }
+    }
+    .button-container {
+      text-align: right;
+      margin-top: 30px;
+    }
+  }
+}
+.auction-page {
+  min-height: calc(100vh - 86px);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-normal);
+  padding: 20px 0;
+  position: relative;
+  .auction-action.d-none {
+    display: none;
+  }
+  .timer {
+    font-size: 2rem;
+    color: var(--primary-default);
+    text-align: center;
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .card-container.d-none {
+    display: none;
+  }
+  h2 {
+    color: var(--primary-default);
+    text-align: center;
+  }
+  .card-container {
+    padding: 20px 0;
+    .card {
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+    }
+    .card.light {
+      background-color: var(--background-light);
+    }
+    .card.dark {
+      background-color: var(--primary-default);
+      .artist-name,
+      p {
+        color: var(--background-light);
+      }
+      .price {
+        background-color: var(--background-light);
+        color: var(--primary-default);
+      }
+    }
+    .card-img {
+      height: 160px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .card-header {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .artist-name {
+        font-family: "Reenie Beanie", cursive;
+        font-weight: 100;
+        font-size: 2rem;
+        color: var(--primary-default);
+        margin-bottom: 0px;
+      }
+
+      .date {
+        font-size: 12px;
+        color: var(--background-dark);
+      }
+      .price {
+        font-size: 14px;
+        background-color: var(--primary-default);
+        padding: 3px 7px;
+        color: var(--background-light);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+        border-radius: 2px;
+      }
+    }
+    .card-body {
+      padding: 5px 10px;
+      p {
+        font-size: 11px;
+        color: var(--primary-default);
+      }
+    }
+  }
+  .auction-action {
+    h2 {
+      text-align: center;
+      display: none;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    p {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 10px;
+      border-radius: 4px;
+      position: relative;
+      z-index: 3;
+      font-size: 12px;
+    }
+
+    .them {
+      text-align: right;
+    }
+    .them p {
+      background-color: var(--primary-default);
+      color: var(--background-light);
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: -5px;
+        z-index: -2;
+        border-top-right-radius: 30px;
+        bottom: 0;
+        background: var(--primary-default);
+      }
+    }
+    .me p {
+      color: var(--background-light);
+      background-color: var(--background-dark);
+
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: -5px;
+        z-index: -2;
+        border-top-left-radius: 30px;
+
+        bottom: 0;
+        background-color: var(--background-dark);
+      }
+    }
+  }
+  form {
+    text-align: center;
+    font-size: 12px;
+    label {
+      color: var(--primary-default);
+    }
+    input {
+      background-color: transparent;
+      border: 1px solid var(--primary-default);
+      border-radius: 3px;
+      padding: 3px 13px;
+    }
+    button {
+      padding: 4px 13px;
+      background-color: var(--primary-default);
+      color: var(--background-light);
+      border: none;
+      border-radius: 3px;
+    }
+    button:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+#notFound {
+  height: calc(100vh - 41px);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-default);
+  color: var(--background-light);
+  img {
+    display: block;
+    width: 100%;
+  }
+  .container {
+    padding: 20px 20px;
+  }
+  .h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 0.3em;
+  }
+  .h3 {
+    font-size: 3rem;
+    margin-bottom: 0.3em;
+  }
+  a {
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.navigation.active {
+  top: 86px;
+  opacity: 1;
+}
+
+.modal-wrapper {
+  display: none;
+}
+@keyframes animationtoleft {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-850px);
+  }
+}
+@keyframes animationtoright {
+  from {
+    transform: translateX(-850px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .modal-wrapper {
+    position: absolute;
+    z-index: 999999999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal {
+      width: 450px;
+      display: inline-block;
+      background-color: var(--primary-default);
+      color: var(--background-light);
+      padding: 60px 20px;
+      border-radius: 20px;
+      font-family: sans-serif;
+      text-align: center;
+    }
+  }
+}

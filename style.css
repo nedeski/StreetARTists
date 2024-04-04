@@ -1,0 +1,994 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:wght@100;300;400;700&display=swap");
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-normal: #edd5bb;
+  --background-light: #fcebd5;
+  --background-dark: #e09686;
+  --primary-default: #a26a5e;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-light);
+}
+
+section {
+  display: none;
+}
+
+header {
+  position: relative;
+  display: block;
+  z-index: 100 !important;
+  padding: 5px 15px;
+  box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.28);
+}
+header .nav-icon-container {
+  color: var(--primary-default);
+  display: flex;
+}
+header .nav-icon-container .menu-btn {
+  cursor: pointer;
+}
+header .navigation {
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: -500%;
+  width: 100%;
+  background-color: var(--primary-default);
+  padding: 0;
+  margin: 0;
+  box-shadow: -1px -1px 6px 2px rgba(0, 0, 0, 0.48);
+  transition: all 0.3s ease;
+}
+header .navigation li {
+  list-style: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+header .navigation li:hover {
+  background-color: #8a5a4f;
+}
+header .navigation li a {
+  padding: 20px 0 20px;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--background-light);
+}
+
+.logo {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.5em;
+  color: var(--primary-default);
+  text-align: center;
+}
+.logo h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.logo .logo-img {
+  width: 70px;
+}
+
+.landing-page .logo-container {
+  padding: 20px 0;
+  text-align: center;
+}
+.landing-page .button-container {
+  width: 260px;
+  height: 400px;
+  margin: 0 AUTO;
+  position: relative;
+}
+.landing-page .button-container .wrap1 {
+  position: relative;
+  z-index: 88;
+}
+.landing-page .button-container .wrap1:hover {
+  filter: drop-shadow(-1px 6px 2px rgba(0, 0, 0, 0.3));
+}
+.landing-page .button-container .wrap2 {
+  position: absolute;
+  top: 110px;
+  width: 100%;
+}
+.landing-page .button-container .wrap2:hover {
+  filter: drop-shadow(-1px 6px 2px rgba(0, 0, 0, 0.3));
+}
+.landing-page .button-container .up {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  max-height: 276px;
+  background-color: var(--background-normal);
+  height: 290px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+  transition: all 0.3s ease;
+  box-shadow: 15px 19px 27px -5px rgba(0, 0, 0, 0.75);
+  z-index: 99;
+  cursor: pointer;
+}
+.landing-page .button-container .up:hover {
+  transform: scale(1.03);
+  box-shadow: 15px 19px 27px -5px rgba(0, 0, 0, 0.75);
+}
+.landing-page .button-container .up p {
+  text-align: center;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 45px;
+  color: var(--primary-default);
+  margin-bottom: 0;
+}
+.landing-page .button-container .up .artist-list {
+  text-align: right;
+}
+.landing-page .button-container .up .artist-list select {
+  padding: 6px 15px;
+  background-color: transparent;
+  color: var(--primary-default);
+  border-color: var(--primary-default);
+}
+.landing-page .button-container .down {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  width: 100%;
+  height: 276px;
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+  background-color: var(--primary-default);
+  transition: all 0.3s ease;
+  box-shadow: 15px 19px 27px -5px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.landing-page .button-container .down:hover {
+  transform: scale(1.03);
+}
+.landing-page .button-container .down p {
+  text-align: center;
+  color: var(--background-light);
+  font-family: "Reenie Beanie", cursive;
+  font-size: 45px;
+  margin-bottom: 0;
+}
+
+.artist-home-page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+.artist-home-page .sales-info {
+  background-color: var(--background-normal);
+  padding: 15px;
+}
+.artist-home-page .sales-info .row {
+  display: flex;
+}
+.artist-home-page .sales-info .row .col {
+  color: var(--background-light);
+  padding: 10px;
+  width: 50%;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: var(--primary-default);
+}
+.artist-home-page .sales-info .row .col .income-amount,
+.artist-home-page .sales-info .row .col .item-qty {
+  font-size: 2rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.artist-home-page .sales-info .row .total-items-sold {
+  margin-right: 10px;
+}
+.artist-home-page .sales-info .col {
+  color: var(--background-light);
+  padding: 10px;
+  text-align: center;
+  background-color: #d44c2e;
+}
+.artist-home-page .sales-info .col .auction-amount {
+  font-size: 2rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.artist-home-page .sales-info .live-auctioning {
+  display: none;
+  text-decoration: none;
+}
+.artist-home-page .chart-container {
+  margin-top: 20px;
+  padding: 15px;
+}
+.artist-home-page .chart-container #myChart {
+  margin-top: 35px;
+}
+.artist-home-page .chart-container .button-container h2 {
+  color: var(--primary-default);
+  font-weight: 300;
+}
+.artist-home-page .chart-container .button-container button {
+  border: none;
+  padding: 7px 12px;
+  background-color: var(--primary-default);
+  color: var(--background-light);
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.artist-home-page .chart-container .button-container button.active {
+  background-color: #d44c2e;
+}
+
+.artist-items {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-normal);
+  padding: 20px 0;
+  position: relative;
+}
+.artist-items .add-item-btn-container {
+  box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+  background-color: var(--background-light);
+  padding: 20px;
+}
+.artist-items .add-item-btn-container #openModalBtn {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-default);
+  font-weight: 100;
+  font-size: 1.5rem;
+  padding: 40px 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+  border: 2px dashed var(--primary-default);
+  background-color: var(--background-light);
+  cursor: pointer;
+}
+.artist-items .add-new-item-modal.d-none {
+  display: none;
+}
+.artist-items .add-new-item-modal {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-default);
+  color: var(--background-light);
+  padding: 20px;
+  font-weight: 100;
+}
+.artist-items .add-new-item-modal h2 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.artist-items .add-new-item-modal .form-control-inline {
+  display: inline-block;
+}
+.artist-items .add-new-item-modal .flex-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.artist-items .add-new-item-modal .flex-form button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+}
+.artist-items .add-new-item-modal .flex-form #addNewItemBtn {
+  margin-right: 10px;
+  color: var(--background-light);
+  background-color: #d44c2e;
+}
+.artist-items .add-new-item-modal .flex-form #cancelBtn {
+  margin-left: 10px;
+  color: var(--primary-default);
+  background-color: var(--background-light);
+}
+.artist-items .add-new-item-modal .form-control {
+  margin-bottom: 10px;
+}
+.artist-items .add-new-item-modal .form-control label {
+  display: block;
+}
+.artist-items .add-new-item-modal .form-control input,
+.artist-items .add-new-item-modal .form-control textarea,
+.artist-items .add-new-item-modal .form-control select {
+  color: var(--background-light);
+  font-weight: 100;
+  padding: 4px 4px;
+  width: 100%;
+  display: block;
+  border: 1px solid var(--background-light);
+  background-color: transparent;
+}
+.artist-items .add-new-item-modal .snapshot {
+  border: 2px dashed var(--background-light);
+  text-align: center;
+}
+.artist-items .add-new-item-modal .snapshot .takesnapshot.d-none {
+  display: none;
+}
+.artist-items .add-new-item-modal .snapshot .takesnapshot {
+  padding: 100px;
+}
+.artist-items #captureImagePage.d-none {
+  display: none;
+}
+.artist-items #captureImagePage {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-default);
+  padding: 20px;
+}
+.artist-items #captureImagePage canvas {
+  display: none;
+}
+.artist-items #captureImagePage video {
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  height: 70vh;
+}
+.artist-items #captureImagePage .wrap {
+  width: 100%;
+  text-align: center;
+}
+.artist-items #captureImagePage #screenShot {
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: var(--background-light);
+}
+.artist-items .card-container.d-none {
+  display: none;
+}
+.artist-items .card-container {
+  padding: 20px 0;
+}
+.artist-items .card-container .card {
+  border-radius: 5px;
+  background-color: var(--background-light);
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+}
+.artist-items .card-container .card-img {
+  height: 160px;
+}
+.artist-items .card-container .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.artist-items .card-container .card-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.artist-items .card-container .card-header .title {
+  font-weight: 400;
+  color: var(--primary-default);
+  margin-bottom: 0px;
+}
+.artist-items .card-container .card-header .date {
+  font-size: 12px;
+  color: var(--background-dark);
+}
+.artist-items .card-container .card-header .price {
+  font-size: 14px;
+  background-color: var(--primary-default);
+  padding: 3px 7px;
+  color: var(--background-light);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+}
+.artist-items .card-container .card-body {
+  padding: 10px;
+}
+.artist-items .card-container .card-body p {
+  font-size: 14px;
+  color: var(--primary-default);
+}
+.artist-items .card-container .card-footer {
+  background-color: var(--primary-default);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.artist-items .card-container .card-footer button {
+  font-size: 12px;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.artist-items .card-container .card-footer button:disabled {
+  opacity: 0.5;
+}
+.artist-items .card-container .card-footer .sendToAuctionBtn {
+  color: white;
+  background-color: #1b59ac;
+}
+.artist-items .card-container .card-footer .publishBtn {
+  color: white;
+  background-color: #1bac6f;
+}
+.artist-items .card-container .card-footer .removeBtn {
+  color: white;
+  background-color: #d44c2e;
+}
+.artist-items .card-container .card-footer .editBtn {
+  color: var(--primary-default);
+  background-color: var(--background-light);
+}
+
+.visiotor-home-page {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: var(--primary-default);
+}
+.visiotor-home-page .hero {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  background: url(./images/Bricks.png) no-repeat;
+  background-size: cover;
+}
+.visiotor-home-page .hero h1 {
+  width: 60%;
+  margin-bottom: 0;
+}
+.visiotor-home-page .hero .cta {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--background-light);
+  background-color: var(--primary-default);
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+.visiotor-home-page .images-animation {
+  position: relative;
+  padding: 20px 0;
+  overflow: hidden;
+  background-color: var(--background-normal);
+}
+.visiotor-home-page .images-animation .top {
+  position: relative;
+  transform: translateX(-850px);
+  display: flex;
+  animation: animationtoleft 45s linear infinite;
+}
+.visiotor-home-page .images-animation .bottom {
+  position: relative;
+  display: flex;
+  animation: animationtoright 45s linear infinite;
+}
+.visiotor-home-page .images-animation .img-wrapper {
+  box-shadow: 6px 5px 6px -1px rgba(0, 0, 0, 0.58);
+  min-width: 150px;
+  height: 100px;
+  margin: 10px;
+}
+.visiotor-home-page .images-animation .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.visiotor-home-page .carousel {
+  font-size: 9px;
+  position: relative;
+  padding-top: 30px;
+}
+.visiotor-home-page .carousel button {
+  font-size: 20px;
+  font-weight: 300;
+  border: none;
+  color: var(--primary-default);
+  background-color: transparent;
+}
+.visiotor-home-page .carousel .prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 100;
+}
+.visiotor-home-page .carousel .next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 100;
+}
+.visiotor-home-page .carousel .carousel-container {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+  padding: 30px 0;
+  overflow-x: hidden;
+}
+.visiotor-home-page .carousel .carousel-container .wrapper {
+  position: relative;
+  display: flex;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+.visiotor-home-page .carousel .carousel-container .carousel-item {
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visiotor-home-page .carousel .carousel-container .carousel-item .left {
+  flex-basis: 50%;
+  padding: 10px;
+  border-right: 1px solid var(--primary-default);
+}
+.visiotor-home-page .carousel .carousel-container .carousel-item .left .card {
+  text-align: center;
+  position: relative;
+}
+.visiotor-home-page .carousel .carousel-container .carousel-item .left .card .image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.visiotor-home-page .carousel .carousel-container .carousel-item .left .card .image img {
+  min-height: 100%;
+  width: 100%;
+}
+.visiotor-home-page .carousel .carousel-container .carousel-item .left .card .text {
+  background-color: var(--background-dark);
+  color: var(--background-light);
+  padding: 50px 10px 10px;
+}
+.visiotor-home-page .carousel .carousel-container .carousel-item .right {
+  text-align: center;
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+.visiotor-listing-page {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-normal);
+  padding: 20px 0;
+  position: relative;
+}
+.visiotor-listing-page .card-container.d-none {
+  display: none;
+}
+.visiotor-listing-page .card-container {
+  padding: 20px 0;
+}
+.visiotor-listing-page .card-container .card {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+}
+.visiotor-listing-page .card-container .card.light {
+  background-color: var(--background-light);
+}
+.visiotor-listing-page .card-container .card.dark {
+  background-color: var(--primary-default);
+}
+.visiotor-listing-page .card-container .card.dark .artist-name,
+.visiotor-listing-page .card-container .card.dark p {
+  color: var(--background-light);
+}
+.visiotor-listing-page .card-container .card.dark .price {
+  background-color: var(--background-light);
+  color: var(--primary-default);
+}
+.visiotor-listing-page .card-container .card-img {
+  height: 160px;
+}
+.visiotor-listing-page .card-container .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.visiotor-listing-page .card-container .card-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visiotor-listing-page .card-container .card-header .artist-name {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 100;
+  font-size: 2rem;
+  color: var(--primary-default);
+  margin-bottom: 0px;
+}
+.visiotor-listing-page .card-container .card-header .date {
+  font-size: 12px;
+  color: var(--background-dark);
+}
+.visiotor-listing-page .card-container .card-header .price {
+  font-size: 14px;
+  background-color: var(--primary-default);
+  padding: 3px 7px;
+  color: var(--background-light);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+}
+.visiotor-listing-page .card-container .card-body {
+  padding: 5px 10px;
+}
+.visiotor-listing-page .card-container .card-body p {
+  font-size: 11px;
+  color: var(--primary-default);
+}
+.visiotor-listing-page .filterBtn {
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+}
+.visiotor-listing-page .filterBtn.d-none {
+  display: none;
+}
+.visiotor-listing-page .filterPage.d-none {
+  display: none;
+}
+.visiotor-listing-page .filterPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: var(--background-light);
+  background-color: var(--primary-default);
+  padding: 20px 10px;
+}
+.visiotor-listing-page .filterPage .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visiotor-listing-page .filterPage .header h2 {
+  margin-bottom: 0;
+}
+.visiotor-listing-page .filterPage .closeBtn,
+.visiotor-listing-page .filterPage .applyBtn {
+  background-color: transparent;
+  border: none;
+}
+.visiotor-listing-page .filterPage .applyBtn {
+  display: inline-block;
+  margin-left: auto;
+}
+.visiotor-listing-page .filterPage .form-control {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--background-light);
+  font-weight: 100;
+}
+.visiotor-listing-page .filterPage .form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+.visiotor-listing-page .filterPage .form-control input,
+.visiotor-listing-page .filterPage .form-control select {
+  background-color: transparent;
+  border: 1px solid var(--background-light);
+  padding: 3px;
+  color: var(--background-light);
+  font-weight: 100;
+}
+.visiotor-listing-page .filterPage .form-control .flex {
+  display: flex;
+}
+.visiotor-listing-page .filterPage .form-control .flex .minprice,
+.visiotor-listing-page .filterPage .form-control .flex .maxprice {
+  margin: 5px;
+}
+.visiotor-listing-page .filterPage .form-control .flex label {
+  display: inline;
+}
+.visiotor-listing-page .filterPage .form-control .flex input {
+  width: 50%;
+}
+.visiotor-listing-page .filterPage .button-container {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.auction-page {
+  min-height: calc(100vh - 86px);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-normal);
+  padding: 20px 0;
+  position: relative;
+}
+.auction-page .auction-action.d-none {
+  display: none;
+}
+.auction-page .timer {
+  font-size: 2rem;
+  color: var(--primary-default);
+  text-align: center;
+}
+.auction-page .timer p {
+  margin-bottom: 15px;
+}
+.auction-page .card-container.d-none {
+  display: none;
+}
+.auction-page h2 {
+  color: var(--primary-default);
+  text-align: center;
+}
+.auction-page .card-container {
+  padding: 20px 0;
+}
+.auction-page .card-container .card {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 4px -5px rgba(0, 0, 0, 0.75);
+}
+.auction-page .card-container .card.light {
+  background-color: var(--background-light);
+}
+.auction-page .card-container .card.dark {
+  background-color: var(--primary-default);
+}
+.auction-page .card-container .card.dark .artist-name,
+.auction-page .card-container .card.dark p {
+  color: var(--background-light);
+}
+.auction-page .card-container .card.dark .price {
+  background-color: var(--background-light);
+  color: var(--primary-default);
+}
+.auction-page .card-container .card-img {
+  height: 160px;
+}
+.auction-page .card-container .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.auction-page .card-container .card-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.auction-page .card-container .card-header .artist-name {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 100;
+  font-size: 2rem;
+  color: var(--primary-default);
+  margin-bottom: 0px;
+}
+.auction-page .card-container .card-header .date {
+  font-size: 12px;
+  color: var(--background-dark);
+}
+.auction-page .card-container .card-header .price {
+  font-size: 14px;
+  background-color: var(--primary-default);
+  padding: 3px 7px;
+  color: var(--background-light);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+}
+.auction-page .card-container .card-body {
+  padding: 5px 10px;
+}
+.auction-page .card-container .card-body p {
+  font-size: 11px;
+  color: var(--primary-default);
+}
+.auction-page .auction-action h2 {
+  text-align: center;
+  display: none;
+}
+.auction-page ul {
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+}
+.auction-page ul p {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 3;
+  font-size: 12px;
+}
+.auction-page ul .them {
+  text-align: right;
+}
+.auction-page ul .them p {
+  background-color: var(--primary-default);
+  color: var(--background-light);
+}
+.auction-page ul .them p::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: -5px;
+  z-index: -2;
+  border-top-right-radius: 30px;
+  bottom: 0;
+  background: var(--primary-default);
+}
+.auction-page ul .me p {
+  color: var(--background-light);
+  background-color: var(--background-dark);
+}
+.auction-page ul .me p::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -5px;
+  z-index: -2;
+  border-top-left-radius: 30px;
+  bottom: 0;
+  background-color: var(--background-dark);
+}
+.auction-page form {
+  text-align: center;
+  font-size: 12px;
+}
+.auction-page form label {
+  color: var(--primary-default);
+}
+.auction-page form input {
+  background-color: transparent;
+  border: 1px solid var(--primary-default);
+  border-radius: 3px;
+  padding: 3px 13px;
+}
+.auction-page form button {
+  padding: 4px 13px;
+  background-color: var(--primary-default);
+  color: var(--background-light);
+  border: none;
+  border-radius: 3px;
+}
+.auction-page form button:disabled {
+  opacity: 0.5;
+}
+
+#notFound {
+  height: calc(100vh - 41px);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-default);
+  color: var(--background-light);
+}
+#notFound img {
+  display: block;
+  width: 100%;
+}
+#notFound .container {
+  padding: 20px 20px;
+}
+#notFound .h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  margin-bottom: 0.3em;
+}
+#notFound .h3 {
+  font-size: 3rem;
+  margin-bottom: 0.3em;
+}
+#notFound a {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.navigation.active {
+  top: 86px;
+  opacity: 1;
+}
+
+.modal-wrapper {
+  display: none;
+}
+
+@keyframes animationtoleft {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-850px);
+  }
+}
+@keyframes animationtoright {
+  from {
+    transform: translateX(-850px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@media screen and (min-width: 700px) {
+  .modal-wrapper {
+    position: absolute;
+    z-index: 999999999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-wrapper .modal {
+    width: 450px;
+    display: inline-block;
+    background-color: var(--primary-default);
+    color: var(--background-light);
+    padding: 60px 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

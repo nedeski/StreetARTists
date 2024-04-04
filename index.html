@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Street ARTists</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" 
+    type="image/png" 
+    href="./images/Logo.png">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Font-awesome 4.7 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<ul class="navigation">
+			  <li class="nav-item"><a href="#artists">Home</a></li>
+			  <li class="nav-item"><a href="#artists/items">Items</a></li>
+			  <li class="nav-item"><a href="#auction">Auction</a></li>
+			</ul>
+			<div class="logo">
+			  <div class="logo-img d-none">
+			   <a href="./index.html"><img src="./images/Logo.png" alt="" /></a>
+			  </div>
+			  <h1 class="logo-text">Street ARTists</h1>
+			</div>
+			<div class="nav-icon-container">
+			  <div class="menu-btn d-none">
+				<i class="fas fa-bars fa-2x"></i>
+			  </div>
+			  <div class="auction-btn d-none">
+				<a href="#auction"><img src="./images/auctionIcon.svg" alt=""></a>
+			  </div>
+			</div>
+		  </header>
+		  <!-- Landing Page -->
+		  <section id="landingPage" class="landing-page">
+			<div class="logo-container">
+			  <img src="./images/Logo.png" alt="" />
+			</div>
+	  
+			<div class="button-container">
+			  <div class="wrap1">
+			  <div class="up">
+				<p>Join as Artist</p>
+				<div class="artist-list">
+				  <select
+					class="artist-dropdown"
+					name="artistDropdown"
+					id="artistDropdown"
+				  >
+					<option value="">Choose</option>
+				  </select>
+				</div>
+			  </div>
+			</div>
+			<div class="wrap2">
+			  <div class="down">
+				<p>Join as Visitor</p>
+			  </div>
+			</div>
+			</div>
+		  </section>
+	  
+		  <!-- Visitor Home Page -->
+		  <section id="visitors" class="visiotor-home-page">
+		 <div class="hero">
+		   <h1>Looking for masterpiece ?</h1>
+		   <a class ='cta'href="#visitors/listing">Find one now !</a>
+		 </div>
+		 <div class="images-animation">
+		   <div class="top">
+			
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img1.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img2.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img3.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img4.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img5.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img6.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img7.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img8.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img9.jpg" alt=""></a>
+	  
+	  
+		   </div>
+		   <div class="bottom">
+			<a href="#visitors/listing" class="img-wrapper"><img src="./images/img1.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img2.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img3.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img4.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img5.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img6.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img7.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img8.jpg" alt=""></a>
+			 <a href="#visitors/listing" class="img-wrapper"><img src="./images/img9.jpg" alt=""></a>
+		   </div>
+		 </div>
+		 <div class="carousel" id="carousel">
+		   <button class="prev"><svg width="15" height="54" viewBox="0 0 15 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M14 1L1 26.2877L14 53" stroke="#A26A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		  </svg></button>
+		   <button class="next"><svg width="15" height="54" viewBox="0 0 15 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M1 1L14 26.2877L1 53" stroke="#A26A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		  </svg></button>
+	  
+		   <div class="carousel-container">
+			<div class="wrapper">
+			  <div class="carousel-item">
+				<div class="left">
+				  <div class="card">
+					<div class="image">
+					  <img src="./images/artist1.jpg" alt="">
+					</div>
+					<div class="text">
+					  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium odit amet doloremque qui dolorum provident libero, sunt dignissimos facere?</p>
+					</div>
+				  </div>
+				</div>
+				<div class="right"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati labore voluptatem possimus aperiam, quasi magni ullam necessitatibus nesciunt, excepturi minus modi!</p></div>
+			  </div>
+			  <div class="carousel-item">
+				<div class="left">
+				  <div class="card">
+					<div class="image">
+					  <img src="./images/artist2.jpg" alt="">
+					</div>
+					<div class="text">
+					  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium odit amet doloremque qui dolorum provident libero, sunt dignissimos facere?</p>
+					</div>
+				  </div>
+				</div>
+				<div class="right"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati labore voluptatem possimus aperiam, quasi magni ullam necessitatibus nesciunt, excepturi minus modi!</p></div>
+			  </div>
+			  <div class="carousel-item">
+				<div class="left">
+				  <div class="card">
+					<div class="image">
+					  <img src="./images/artist3.jpg" alt="">
+					</div>
+					<div class="text">
+					  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium odit amet doloremque qui dolorum provident libero, sunt dignissimos facere?</p>
+					</div>
+				  </div>
+				</div>
+				<div class="right"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati labore voluptatem possimus aperiam, quasi magni ullam necessitatibus nesciunt, excepturi minus modi!</p></div>
+			  </div>
+			</div>
+		   </div>
+	  
+		 </div>
+		  </section>
+	  
+		  <!-- Visitor Listing Home Page -->
+		  <section id="visitorsListing" class="visiotor-listing-page">
+			<div class="card-container">
+			  <div class="card dark">
+				<div class="card-img">
+				  <img
+					src="https://images.unsplash.com/photo-1617994422012-baad9c327e20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFpbnRpbmcsIGFydCwgY2FudmFzLCBkaWdpdGFsYXJ0LCBhcnRpc3R8fHx8fHwxNjM1NDY5MTI0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800"
+					alt=""
+				  />
+				</div>
+				<div class="card-header">
+				  <div class="left">
+					<h3 class="artist-name">Artist Name</h3>
+					
+				  </div>
+				  <div class="right">
+					<span class="price">500$</span>
+				  </div>
+				</div>
+				<div class="card-body">
+				  <p>Item title</p>
+				  <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					iure alias officia nulla sunt temporibus minus quam velit debitis
+					reiciendis amet, eius dolor, neque dolorum ipsam inventore, libero
+					
+				  </p>
+				</div>
+			  </div>
+	  
+			  <div class="card light">
+				<div class="card-img">
+				  <img
+					src="https://images.unsplash.com/photo-1617994422012-baad9c327e20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFpbnRpbmcsIGFydCwgY2FudmFzLCBkaWdpdGFsYXJ0LCBhcnRpc3R8fHx8fHwxNjM1NDY5MTI0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800"
+					alt=""
+				  />
+				</div>
+				<div class="card-header">
+				  <div class="left">
+					<h3 class="artist-name">Artist Name</h3>
+					
+				  </div>
+				  <div class="right">
+					<span class="price">500$</span>
+				  </div>
+				</div>
+				<div class="card-body">
+				  <p>Item title</p>
+				  <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					iure alias officia nulla sunt temporibus minus quam velit debitis
+					reiciendis amet, eius dolor, neque dolorum ipsam inventore, libero
+					
+				  </p>
+				</div>
+			  </div>
+	  
+			  <div class="card dark">
+				<div class="card-img">
+				  <img
+					src="https://images.unsplash.com/photo-1617994422012-baad9c327e20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFpbnRpbmcsIGFydCwgY2FudmFzLCBkaWdpdGFsYXJ0LCBhcnRpc3R8fHx8fHwxNjM1NDY5MTI0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800"
+					alt=""
+				  />
+				</div>
+				<div class="card-header">
+				  <div class="left">
+					<h3 class="artist-name">Artist Name</h3>
+					
+				  </div>
+				  <div class="right">
+					<span class="price">500$</span>
+				  </div>
+				</div>
+				<div class="card-body">
+				  <p>Item title</p>
+				  <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					iure alias officia nulla sunt temporibus minus quam velit debitis
+					reiciendis amet, eius dolor, neque dolorum ipsam inventore, libero
+					
+				  </p>
+				</div>
+			  </div>
+			  
+			</div>
+			<div class="filterBtn "><img src="./images/filterBtn.svg" alt=""></div>
+			<div class="filterPage d-none">
+			  <div class="header"> 
+				<h2>Filter By</h2>
+				<button class="closeBtn"><img src="./images/X.svg" alt=""></button>
+			  </div>
+				<div class="form-control">
+				  <label for="filterbyTitle">By Item Title</label>
+				  <input type="text" name="filterbyTitle" id="filterbyTitle">
+				</div>
+				<div class="form-control">
+				  <label for="filterbyArtist">By Artist</label>
+				  <select name="filterbyArtist" id="filterbyArtist">
+					
+				  </select>
+				</div>
+				<div class="form-control">
+				  <p>By Price</p>
+				 <div class="flex">
+	  
+				  <div class="minprice">
+					<label for="filterbyMinPrice">Min:</label>
+				  <input type="number" name="filterbyMinPrice" id="filterbyMinPrice">
+				  </div>
+				  <div class="maxprice">
+					<label for="filterbyMaxPrice">Max:</label>
+				  <input type="number" name="filterbyMaxPrice" id="filterbyMaxPrice">
+				  </div>
+				 </div>
+				  
+				</div>
+				<div class="form-control">
+				  <label for="filterbyType">by Type</label>
+				  <select name="filterbyType" id="filterbyType">
+				  </select>
+				</div>
+				<div class="button-container">
+				  <button class="applyBtn"><img src="./images/applyBtn.svg" alt=""></button>
+				</div>
+			</div>
+		  </section>
+	  
+		  <!-- Artist Home Page -->
+		  <section id="artists" class="artist-home-page">
+			<div class="sales-info">
+			  <div class="row">
+				<div class="total-items-sold col">
+				  <p>Items Sold</p>
+				  <p class="item-qty">?</p>
+				</div>
+				<div class="total-income col">
+				  <p>Total Income</p>
+				  <p class="income-amount">$0</p>
+				</div>
+			  </div>
+			  <a href='#auction'class="live-auctioning col">
+				<p>Live Auctioning Item</p>
+				<p class="auction-amount">$0</p>
+				<p>current bid</p>
+			  </a>
+			</div>
+			<div class="chart-container">
+			  <div class="button-container">
+				<h2>Display my info for last</h2>
+				<button id="sevenDays">7 days</button>
+				<button id="fourteenDays">14 days</button>
+				<button id="oneMonth">1 month</button>
+				<button id="oneYear">1 year</button>
+			  </div>
+			  <div class="chart">
+				<canvas id="myChart"></canvas>
+			  </div>
+			</div>
+		  </section>
+		  <!-- Artist items page -->
+		  <section id="artistsItems" class="artist-items">
+			<div class="add-item-btn-container">
+			  <button id="openModalBtn">+ Add new Item</button>
+			</div>
+			<div class="card-container">
+			  <div class="card">
+				<div class="card-img">
+				  <img
+					src="https://images.unsplash.com/photo-1617994422012-baad9c327e20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFpbnRpbmcsIGFydCwgY2FudmFzLCBkaWdpdGFsYXJ0LCBhcnRpc3R8fHx8fHwxNjM1NDY5MTI0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800"
+					alt=""
+				  />
+				</div>
+				<div class="card-header">
+				  <div class="left">
+					<h3 class="title">Item title</h3>
+					<span class="date">15.11.1990</span>
+				  </div>
+				  <div class="right">
+					<span class="price">500$</span>
+				  </div>
+				</div>
+				<div class="card-body">
+				  <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					iure alias officia nulla sunt temporibus minus quam velit debitis
+					reiciendis amet, eius dolor, neque dolorum ipsam inventore, libero
+					quibusdam a.
+				  </p>
+				</div>
+				<div class="card-footer">
+				  <button class="sendToAuctionBtn">Send to auction</button>
+				  <button class="publishBtn">Unpublish</button>
+				  <button class="removeBtn">Remove</button>
+				  <button class="editBtn">Edit</button>
+				</div>
+			  </div>
+			  <div class="card">
+				<div class="card-img">
+				  <img
+					src="https://images.unsplash.com/photo-1617994422012-baad9c327e20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFpbnRpbmcsIGFydCwgY2FudmFzLCBkaWdpdGFsYXJ0LCBhcnRpc3R8fHx8fHwxNjM1NDY5MTI0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800"
+					alt=""
+				  />
+				</div>
+				<div class="card-header">
+				  <div class="left">
+					<h3 class="title">Item title</h3>
+					<span class="date">15.11.1990</span>
+				  </div>
+				  <div class="right">
+					<span class="price">500$</span>
+				  </div>
+				</div>
+				<div class="card-body">
+				  <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					iure alias officia nulla sunt temporibus minus quam velit debitis
+					reiciendis amet, eius dolor, neque dolorum ipsam inventore, libero
+					quibusdam a.
+				  </p>
+				</div>
+				<div class="card-footer">
+				  <button id="sendToAuctionBtn">Send to auction</button>
+				  <button id="publishBtn">Unpublish</button>
+				  <button id="removeBtn">Remove</button>
+				  <button id="editBtn">Edit</button>
+				</div>
+			  </div>
+			  <div class="card">
+				<div class="card-img">
+				  <img
+					src="https://images.unsplash.com/photo-1617994422012-baad9c327e20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFpbnRpbmcsIGFydCwgY2FudmFzLCBkaWdpdGFsYXJ0LCBhcnRpc3R8fHx8fHwxNjM1NDY5MTI0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800"
+					alt=""
+				  />
+				</div>
+				<div class="card-header">
+				  <div class="left">
+					<h3 class="title">Item title</h3>
+					<span class="date">15.11.1990</span>
+				  </div>
+				  <div class="right">
+					<span class="price">500$</span>
+				  </div>
+				</div>
+				<div class="card-body">
+				  <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					iure alias officia nulla sunt temporibus minus quam velit debitis
+					reiciendis amet, eius dolor, neque dolorum ipsam inventore, libero
+					quibusdam a.
+				  </p>
+				</div>
+				<div class="card-footer">
+				  <button id="sendToAuctionBtn">Send to auction</button>
+				  <button id="publishBtn">Unpublish</button>
+				  <button id="removeBtn">Remove</button>
+				  <button id="editBtn">Edit</button>
+				</div>
+			  </div>
+			</div>
+			<div class="add-new-item-modal d-none">
+			 <form id='addItemForm'>
+				<div class="flex-form">
+				  <h2>Add new Item</h2>
+				  <div class="form-control-inline">
+					<label for="isPublished">Is published</label>
+					<input
+					  type="checkbox"
+					  name="isPublished"
+					  id="isPublished"
+					  checked
+					/>
+				  </div>
+				</div>
+				<div class="form-control">
+				  <label for="itemTitle">Title</label>
+				  <input type="text" name="itemTitle" id="itemTitle" required />
+				</div>
+				<div class="form-control">
+				  <label for="itemDescription">Description</label>
+				  <textarea
+					type="text"
+					name="itemDescription"
+					id="itemDescription"
+				  /></textarea>
+				</div>
+			  <div class="flex-form">
+				<div class="form-control">
+				  <label for="itemType">Type</label>
+				  <select id="itemType" required>
+					<option value="">Select Art Type</option>
+				  </select>
+				</div>
+				<div class="form-control">
+				  <label for="itemPrice">Price</label>
+				  <input type="number" name="itemPrice" id="itemPrice" required />
+				</div>
+			  </div>
+				<div class="form-control">
+				  <label for="itemImgUrl">Image URL</label>
+				  <input type="text" name="itemImgUrl" id="itemImgUrl" required />
+				</div>
+				<p>or</p>
+				<div class="snapshot">
+				  <img class= "capturedImage" src="" alt="">
+				  <div class="takesnapshot">
+					<i class="fas fa-camera fa-4x"></i>
+					<p>Take snapshot</p>
+				  </div>
+				</div>
+			   <div class="flex-form">
+				 <button type="submit" id="addNewItemBtn">Add New Item</button>
+				 <button id=cancelBtn>Cancel</button>
+			   </div>
+			  </form>
+			</div>
+			<div id="captureImagePage" class="d-none">
+			  <select id="videos"></select>
+			  <video autoplay></video>
+			  <canvas id='camcanvas'></canvas>
+			  <div class="wrap">
+				<button id="screenShot"><i class="fas fa-camera fa-4x"></i></button>
+			  </div>
+			</div>
+		  </section>
+	  
+		  <!-- auction Home Page -->
+		  <section id="auction" class="auction-page">
+			<h2 class="auction-info">There is no item in Auction</h2>
+			<div class="card-container">
+			  <div class="card dark">
+				<div class="card-img">
+				  <img
+					src="https://images.unsplash.com/photo-1617994422012-baad9c327e20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFpbnRpbmcsIGFydCwgY2FudmFzLCBkaWdpdGFsYXJ0LCBhcnRpc3R8fHx8fHwxNjM1NDY5MTI0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800"
+					alt=""
+				  />
+				</div>
+				<div class="card-header">
+				  <div class="left">
+					<h3 class="artist-name">Artist Name</h3>
+				  </div>
+				  <div class="right">
+					<span class="price">500$</span>
+				  </div>
+				</div>
+				<div class="card-body">
+				  <p>Item title</p>
+				  <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					iure alias officia nulla sunt temporibus minus quam velit debitis
+					reiciendis amet, eius dolor, neque dolorum ipsam inventore, libero.
+				  </p>
+				</div>
+			  </div>
+			</div>
+		   <div class="auction-action d-none">
+			<div class="timer">
+			</div>
+			<form id='bidForm'>
+			  <label for="bidAmount">Bid Amount($)</label>
+			  <input type="number" name="bidAmount" id="bidAmount" required>
+			  <button id=confirmBid>Bid</button>
+			</form>
+			<ul class="all-bids-list">
+			</ul>
+			<h2>Auction Done !</h2>
+		   </div>
+		  </section>
+		  <section id="notFound" class="404">
+			<img src="./images/404.png" alt="">
+			<div class="container">
+			  <p class="h1">404 !</p>
+			  <p class="h3">We couldn't find this page.</p>
+			  <a href="#">Go to Homepage</a>
+			</div>
+		  </section>
+		  <div class="modal-wrapper">
+			  <div class="modal">
+				<h3>Information</h3>
+				<p>This app was designed only for mobile devices </p>
+			  </div>
+		  </div>
+	</body>
+	<!-- jQuery library -->
+		<script src="./vendor/jquery.min.js"></script>
+
+		<script src="./Data/data.js"></script>
+		<script src="./Js/chart.js"></script>
+		<script src="./Js/landing_page.js"></script>
+		<script src="./Js/visitor_home_page.js"></script>
+		<script src="./Js/visitor_listing_page.js"></script>
+		<script src="./Js/auction.js"></script>
+		<script src="./Js/artist_home_page.js"></script>
+		<script src="./Js/artist_items_page.js"></script>
+		<script src="./Js/main.js"></script>
+</html>
